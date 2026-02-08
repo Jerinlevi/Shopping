@@ -1,0 +1,16 @@
+const express=require('express')
+const cors=require('cors')
+const app=express()
+const connectDb=require('./config/db')
+require('dotenv').config()
+app.use(express.json())
+app.use(cors())
+connectDb()
+const PORT=process.env.PORT
+app.use('/users',require('./routes/userRoutes'))
+app.use('/items',require('./routes/itemRoutes'))
+app.use('/carts',require('./routes/cartRoutes'))
+app.use('/orders',require('./routes/orderRoutes'))
+app.listen(PORT,()=>{
+    console.log("server is running")
+})
