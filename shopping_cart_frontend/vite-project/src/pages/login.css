@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+}
+
+.auth {
+  min-height: calc(100vh - 84px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 72px;
+  background: radial-gradient(circle at top, #f9efe1, #f7f5f1 50%, #eef4f4);
+}
+
+.auth-card {
+  width: min(1100px, 100%);
+  background: #ffffff;
+  border-radius: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -40px rgba(22, 30, 30, 0.6);
+}
+
+.auth-copy {
+  padding: 48px;
+  background: linear-gradient(160deg, #111c1f 0%, #1a2b2e 50%, #111c1f 100%);
+  color: #f5f4f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-copy h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 2vw + 1.5rem, 3rem);
+  margin: 0;
+}
+
+.auth-copy p {
+  line-height: 1.6;
+  color: rgba(245, 244, 240, 0.78);
+}
+
+.auth-copy img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  max-height: 320px;
+}
+
+.auth-form {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: var(--font-sans);
+}
+
+.auth-form h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: #152021;
+}
+
+.text-button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: #d66b2d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .auth-card {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-copy {
+    padding: 36px;
+  }
+
+  .auth-form {
+    padding: 36px;
+  }
+}
